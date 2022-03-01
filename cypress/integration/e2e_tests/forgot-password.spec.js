@@ -15,7 +15,7 @@ describe('e2e test scenario 2- forgot password', () => {
     })
 
     it('should submit the form', () => {
-        cy.get()
+        cy.contains('Send Password').click()
     })
 
 

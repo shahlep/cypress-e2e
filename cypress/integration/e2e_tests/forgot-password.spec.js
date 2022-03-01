@@ -7,7 +7,7 @@ describe('e2e test scenario 2- forgot password', () => {
 
     })
     it('should click on the forgot password', () => {
-        cy.get('offset3 > a').click()       
+        cy.get('.offset3 > a').click()       
     })
 
     it('should fill email form', () => {

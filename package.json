@@ -20,5 +20,8 @@
   "bugs": {
     "url": "https://github.com/shahlep/cypress-e2e/issues"
   },
-  "homepage": "https://github.com/shahlep/cypress-e2e#readme"
+  "homepage": "https://github.com/shahlep/cypress-e2e#readme",
+  "dependencies": {
+    "cypress": "^9.5.1"
+  }
 }

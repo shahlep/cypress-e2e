@@ -7,11 +7,15 @@ describe('Login Logout e2e test', () => {
     })
     
     it('should try with invalid credentials', () => {
-        //code
+        cy.get('#signin_button').click()
+        cy.url().should('include','login.html')
+        cy.get('#user_login').type('lalalala')
+        cy.get('#user_password').type('lalalala')
+        cy.contains('Sign in').click()
     })
 
     it('should display error message', () => {
-        //code
+        
     })
 
     it('should try with valid credentials', () => {

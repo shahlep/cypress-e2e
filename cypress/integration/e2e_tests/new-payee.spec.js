@@ -6,22 +6,14 @@ describe('New Payee e2e tests', () => {
         cy.url().should('include','index.html')
         cy.get('#signin_button').click()
         cy.url().should('include','login.html')
-        cy.get('#user_login').type('username')
-        cy.get('#user_password').type('password')
-        cy.contains('Sign in').click()
+        cy.login('username','password')
     })
-
-    //it('should be in account summary page', () => {
-       
-   //     cy.url().should('include','account-summary.html')
-     //   cy.contains('Pay Bills', {timeout: 10000}).click()
-    //})
 
     it('should be in pay bills page, fill up the form and submit', () => {
         cy.contains('Pay Bills', {timeout: 10000}).click()
         cy.url().should('include','pay-bills.html')
         cy.contains('Add New Payee' ,{timeout:10000}).click()
-        //cy.url().should('include','pay-bills-new-payee.html')
+        
         cy.get('#np_new_payee_name').type('test')
         cy.get('#np_new_payee_address').type('test street 123')
         cy.get('#np_new_payee_account').type('basic')

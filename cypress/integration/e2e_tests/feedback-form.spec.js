@@ -2,7 +2,8 @@
 
 describe('Feedback form e2e', () => {
   it('visit webiste', () => {
-      //code
+    cy.visit('http://zero.webappsecurity.com/index.html')
+    cy.url().should('include','index.html')
   }) 
 
   it('should display feedback content', () => {

@@ -9,9 +9,6 @@ describe('Login Logout e2e test', () => {
     it('should try with invalid credentials', () => {
         cy.get('#signin_button').click()
         cy.url().should('include','login.html')
-        //cy.get('#user_login').type('lalalala')
-        //cy.get('#user_password').type('lalalala')
-        //cy.contains('Sign in').click()
         cy.login('lalalala','lalalala')
     })
 

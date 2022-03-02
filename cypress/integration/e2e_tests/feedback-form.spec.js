@@ -26,7 +26,7 @@ describe('Feedback form e2e', () => {
   })
 
   it('should submit feedback form', () => {
-      //code
+      cy.contains('Send Message').click()
   })
 
   it('should display feedback message', () => {

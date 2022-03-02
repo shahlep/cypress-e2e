@@ -13,7 +13,7 @@ describe('Feedback form e2e', () => {
   })
 
   it('should load feedback form', () => {
-      //code
+      cy.get('form').should('be.visible')
   })
 
   it('should fill the feedback form', () => {

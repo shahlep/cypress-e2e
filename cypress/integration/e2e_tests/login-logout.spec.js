@@ -27,6 +27,9 @@ describe('Login Logout e2e test', () => {
     })
 
     it('should try logout', () => {
-        //code
+        cy.url().should('include','account')
+        cy.get('.icon-user').click()
+        cy.get('#logout_link').click()
+        cy.url().should('include','index.html')
     })
 })

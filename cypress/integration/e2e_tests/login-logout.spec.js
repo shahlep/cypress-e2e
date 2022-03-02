@@ -15,7 +15,7 @@ describe('Login Logout e2e test', () => {
     })
 
     it('should display error message', () => {
-        cy.get('.alert-error').should('be.visible')
+        cy.get('.alert-error').should('be.visible').and('contain','Login and/or password are wrong.')
     })
 
     it('should try with valid credentials', () => {

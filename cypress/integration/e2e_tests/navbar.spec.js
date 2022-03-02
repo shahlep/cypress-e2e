@@ -19,7 +19,8 @@ describe('navbar e2e', () => {
     })
 
     it('should display homepage content', () => {
-        //code  
+        cy.contains('Zero Bank').click()
+        cy.url().should('include','index.html')
       })
     
 })

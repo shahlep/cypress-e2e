@@ -13,7 +13,9 @@ describe('navbar e2e', () => {
     })
 
     it('should display feedback content', () => {
-      //code  
+        cy.contains('Feedback').click()
+        cy.url().should('include','feedback.html')
+        cy.get('h3').should('be.visible')
     })
 
     it('should display homepage content', () => {

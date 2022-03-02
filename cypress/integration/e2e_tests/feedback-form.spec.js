@@ -17,7 +17,12 @@ describe('Feedback form e2e', () => {
   })
 
   it('should fill the feedback form', () => {
-      //code
+      cy.get('#name').type('test')
+      cy.get('#email').type('text@haha.com')
+      cy.get('#subject').type('text subject')
+      cy.get('#comment').type('text text text text as comment!')
+
+
   })
 
   it('should submit feedback form', () => {

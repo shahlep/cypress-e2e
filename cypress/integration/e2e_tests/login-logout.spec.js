@@ -9,21 +9,25 @@ describe('Login Logout e2e test', () => {
     it('should try with invalid credentials', () => {
         cy.get('#signin_button').click()
         cy.url().should('include','login.html')
-        cy.get('#user_login').type('lalalala')
-        cy.get('#user_password').type('lalalala')
-        cy.contains('Sign in').click()
+        //cy.get('#user_login').type('lalalala')
+        //cy.get('#user_password').type('lalalala')
+        //cy.contains('Sign in').click()
+        cy.login('lalalala','lalalala')
     })
 
     it('should display error message', () => {
-        cy.get('.alert-error').should('be.visible').and('contain','Login and/or password are wrong.')
+        cy.get('.alert-error', {timeout:10000})
+        .should('be.visible')
+        .and('contain','Login and/or password are wrong.')
     })
 
     it('should try with valid credentials', () => {
         //cy.get('#signin_button').click()
         cy.url().should('include','login.html')
-        cy.get('#user_login').type('username')
-        cy.get('#user_password').type('password')
-        cy.contains('Sign in').click()
+       // cy.get('#user_login').type('username')
+       // cy.get('#user_password').type('password')
+       // cy.contains('Sign in').click()
+       cy.login('username','password')
     })
 
     it('should try logout', () => {

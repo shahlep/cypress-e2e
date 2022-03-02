@@ -30,6 +30,6 @@ describe('Feedback form e2e', () => {
   })
 
   it('should display feedback message', () => {
-      //code
+      cy.get('#feedback-title').contains('Feedback')
   })
 })

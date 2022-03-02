@@ -2,7 +2,8 @@
 
 describe('Login Logout e2e test', () => {
     it('visit website', () => {
-        //code
+        cy.visit('http://zero.webappsecurity.com/index.html')
+        cy.url().should('include','index.html')
     })
     
     it('should try with invalid credentials', () => {

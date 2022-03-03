@@ -21,4 +21,7 @@ describe('transfer funds e2e tests', () => {
       cy.get('h2').should('be.visible').and('contain','Transfer Money & Make Payments - Verify')
       cy.get('#btn_submit').click()
   }) 
+    it('should show successfull message', () => {
+      cy.get('.alert-success').should('be.visible').and('contain','You successfully submitted your transaction.')  
+    })
 })

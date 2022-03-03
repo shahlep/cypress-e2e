@@ -21,5 +21,9 @@ describe('Currency Exchange e2e tests', () => {
         cy.get('#purchase_cash').click()
         
    })
+    
+   it('should show successful message', () => {
+       cy.get('#alert_content').should('be.visible').and('contain','Foreign currency cash was successfully purchased.')
+   })
 
 })

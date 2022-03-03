@@ -22,5 +22,9 @@ describe('New Payment e2e tests', () => {
          cy.get('#pay_saved_payees').click()
     })
 
+    it('should see successful message', () => {
+        cy.get('#alert_content').should('be.visible').and('contain','The payment was successfully submitted.')
+    })
+
 
 })

@@ -20,4 +20,9 @@ describe('Find transactions e2e tests', () => {
         cy.get('#aa_toAmount').type('2000')
         cy.get('button[type="submit"]').click()
     })
+
+    it('should display results', () => {
+        //cy.get('#filtered_transactions_for_account').should('be.visible')
+        cy.get('tbody > tr').its('length').should('be.gt',0)
+    })
 })
